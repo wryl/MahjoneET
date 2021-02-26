@@ -8,11 +8,11 @@ NaoMahjong :(https://github.com/HitomiFlower/NaoMahjong.git)
 xasset热更等参考博客:(https://www.lfzxb.top/)
 
 # ET的介绍：
-牛逼不谈.但是我使用的是一个迷失在历史缝隙中的临时版.
+牛逼不谈.但是我使用的是一个迷失在历史缝隙中的临时版.基于版本:(https://github.com/egametang/ET/commit/43a848736ea99738dd1dbe036199984a1d078328)开发
 # NaoMahjong
-原项目网络协议基于Photon .改之
+原项目网络模块使用Photon .改之
 # xasset
-好用.当前使用的et版本打包属于未知领域.故替换
+好用.当前使用的et版本打包属于未知领域出bug不知道怎么改.故替换
 
 # 效果图
 
