@@ -1,0 +1,361 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03142c330ced64e0ab46cddcd0484ab7, type: 3}
+  m_Name: Rules
+  m_EditorClassIdentifier: 
+  searchPatternAsset: '*.asset'
+  searchPatternController: '*.controller'
+  searchPatternDir: '*'
+  searchPatternMaterial: '*.mat'
+  searchPatternPng: '*.png'
+  searchPatternPrefab: '*.prefab'
+  searchPatternScene: '*.unity'
+  searchPatternText: '*.txt,*.bytes,*.json,*.csv,*.xml,*htm,*.html,*.yaml,*.fnt'
+  version: 6
+  scenesInBuild:
+  - {fileID: 102900000, guid: e0d691ac8c1d0454ba07089ea820e18a, type: 3}
+  - {fileID: 102900000, guid: 18076d08b511eae41953087f5d795977, type: 3}
+  - {fileID: 102900000, guid: b0ae0ffb97e09a644a9274ca6513cf33, type: 3}
+  rules:
+  - searchPath: Assets/Bundles
+    searchPattern: '*.prefab'
+    nameBy: 1
+    assetBundleName: 
+  ruleAssets:
+  - bundle: 1e96772a4c6c74ace02203ff11bc0ee6.unity3d
+    path: Assets/Bundles/UI/CreateRoomPanel.prefab
+  - bundle: d455a4c7c6c169bc743ece2f6da4a2f8.unity3d
+    path: Assets/Bundles/UI/Prefabs/Component/AudioManager.prefab
+  - bundle: 7d0c82c4477294195a24e3da4a23784e.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/Meld (left).prefab
+  - bundle: 7d1c7b77c5dff84bf1a13e00cc8c4ce4.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/Meld (opposite).prefab
+  - bundle: 5f1cab368a874cdaa31541644d0f44a5.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/Meld (right).prefab
+  - bundle: d14d1c3f3292c5c362a5e8e8d75388ea.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (left).prefab
+  - bundle: bb3e9ab49f4ddcd0506f838a1ff555de.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (opposite).prefab
+  - bundle: 5be4e82bb789d3926bf4693c5950c605.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (right).prefab
+  - bundle: 4f5387764a69460fa72202903fe1bae9.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (self).prefab
+  - bundle: f885968103c84f0aa29471230a2dd183.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/PlayerBeiDoras.prefab
+  - bundle: 37b3ed24e6bdd1f23649e4e89cd3e060.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/PlayerHand.prefab
+  - bundle: a6d257941b733f171d92984657020098.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/PlayerRiver.prefab
+  - bundle: 4c7e91f7aade7286ecd15994b8dddc29.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/PlayerTiles.prefab
+  - bundle: 5a6650b253911f2df9754a46879bc6d0.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Table.prefab
+  - bundle: b6e02b053b0a281efc4510150b65b1fb.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/Yama4Players.prefab
+  - bundle: a9fdcb458a1edd0768876a02e442047f.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/playerOpen.prefab
+  - bundle: 1e0a1c8e6145ee5306836014a71104b6.unity3d
+    path: Assets/Bundles/UI/Prefabs/Mahjong/tile.prefab
+  - bundle: 9b70f5a1b7639ccbf3ba9165043ef147.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/BaseNumberPrefab.prefab
+  - bundle: 5c220d8a312d79a5e7b786b83ae07ce8.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/BoardCanvas.prefab
+  - bundle: 480ee9061eb17f16e15b0c6d2c237543.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/BonusNumberPrefab.prefab
+  - bundle: 5f2b1c2fa29007b46b6df4f60770bda3.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/FanNumberPrefab.prefab
+  - bundle: ca702952e5e0d25faee8e81fd3d62039.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/FuNumberPrefab.prefab
+  - bundle: 7e51309467d43e5b99fa838912b0d359.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/HandTile.prefab
+  - bundle: 20789eb4712b101664d9e67cf0af0fd0.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/MeldOption.prefab
+  - bundle: c62575321f07d5e97eb3eb92527d6e8b.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayEffect.prefab
+  - bundle: 36c1f1c2543a6525f3a4e1ac29151cc0.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayerNames.prefab
+  - bundle: c1f23b4b1b6469aebe840a7aaef24ff9.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayerPlace.prefab
+  - bundle: 3990cb6740880d0a2c97ff52119945e5.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayerPointPanel.prefab
+  - bundle: 38fb4aba6f45ffdb2199ec25b3dff682.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/RoundDrawPanel.prefab
+  - bundle: 0b6afac0941c45e7ada9b806d92713d0.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/SelectableMeld.prefab
+  - bundle: 0598a6ca875319ecb16ab33c81474d16.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/SimpleTile.prefab
+  - bundle: 9f1c3b8e4f1b6ac12e1ac92b0a304d80.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/TimerPanel.prefab
+  - bundle: fb63c91b7f082874df2117dcef64ee3b.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/Elements/YakuItem.prefab
+  - bundle: 37b9db98163006f128deb498b3153128.unity3d
+    path: Assets/Bundles/UI/Prefabs/MahjongUI/HandTilePanel.prefab
+  - bundle: 8d8dd794c2bedfed59608064278ee78b.unity3d
+    path: Assets/Bundles/UI/Prefabs/PUNLobby/InTurnPanel.prefab
+  - bundle: 0537ca063ba527d83074275c3e6e1281.unity3d
+    path: Assets/Bundles/UI/Prefabs/PUNLobby/LocalSettingPanel.prefab
+  - bundle: 0d50deed26e4caaf80b939f99c6a5866.unity3d
+    path: Assets/Bundles/UI/Prefabs/PUNLobby/PlayerInfoPanel.prefab
+  - bundle: 8358abd12e58fd64ab5d0686e51b0fed.unity3d
+    path: Assets/Bundles/UI/Prefabs/PUNLobby/RulePanel.prefab
+  - bundle: 000e7d01459c0b7fc6c46ef807402a13.unity3d
+    path: Assets/Bundles/UI/Prefabs/PUNLobby/WarningPanel.prefab
+  - bundle: 2fdd1a2efb057936336ac07df3dae28c.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/Button.prefab
+  - bundle: 613f5e9a9c98c9ca45d231a59dd559a0.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/InputField (TMP).prefab
+  - bundle: 486c8ccadb4e6110f51dff1cd58cd0b3.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/InputField.prefab
+  - bundle: 835d99a584f3599335333e822de4c2b7.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/SettingItem-Bool.prefab
+  - bundle: babf561b0d8c550811aaab63037f9c91.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/SettingItem-Selection.prefab
+  - bundle: f09105227d239ad00221a5cf9bc74637.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/SettingItem-Text.prefab
+  - bundle: 6db9166d416dab7a3ca85f9dfee62858.unity3d
+    path: Assets/Bundles/UI/Prefabs/UI/Toggle.prefab
+  - bundle: fb28c8faf6d7a9b18488e1505342d368.unity3d
+    path: Assets/Bundles/UI/RoomCanvas.prefab
+  - bundle: 245cd5149379dfbe5033924dcc2534c9.unity3d
+    path: Assets/Bundles/UI/RoomEntry.prefab
+  - bundle: 64aa1886e59a53e04557748983600c67.unity3d
+    path: Assets/Bundles/UI/SlotPanel.prefab
+  - bundle: d271e46befcf51c65a9835c5da2b2741.unity3d
+    path: Assets/Bundles/UI/UILobby.prefab
+  - bundle: 0fdb89a04e55223f72b5ad7a78c32c00.unity3d
+    path: Assets/Bundles/UI/UILogin.prefab
+  - bundle: 2efc619c3f96e68cc7eaeffd09addad3.unity3d
+    path: Assets/Bundles/Unit/Unit.prefab
+  ruleBundles:
+  - name: 1e96772a4c6c74ace02203ff11bc0ee6.unity3d
+    assets:
+    - Assets/Bundles/UI/CreateRoomPanel.prefab
+  - name: fb28c8faf6d7a9b18488e1505342d368.unity3d
+    assets:
+    - Assets/Bundles/UI/RoomCanvas.prefab
+  - name: 245cd5149379dfbe5033924dcc2534c9.unity3d
+    assets:
+    - Assets/Bundles/UI/RoomEntry.prefab
+  - name: 64aa1886e59a53e04557748983600c67.unity3d
+    assets:
+    - Assets/Bundles/UI/SlotPanel.prefab
+  - name: d271e46befcf51c65a9835c5da2b2741.unity3d
+    assets:
+    - Assets/Bundles/UI/UILobby.prefab
+  - name: 0fdb89a04e55223f72b5ad7a78c32c00.unity3d
+    assets:
+    - Assets/Bundles/UI/UILogin.prefab
+  - name: d455a4c7c6c169bc743ece2f6da4a2f8.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Component/AudioManager.prefab
+  - name: f885968103c84f0aa29471230a2dd183.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/PlayerBeiDoras.prefab
+  - name: 37b3ed24e6bdd1f23649e4e89cd3e060.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/PlayerHand.prefab
+  - name: a9fdcb458a1edd0768876a02e442047f.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/playerOpen.prefab
+  - name: a6d257941b733f171d92984657020098.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/PlayerRiver.prefab
+  - name: 4c7e91f7aade7286ecd15994b8dddc29.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/PlayerTiles.prefab
+  - name: 5a6650b253911f2df9754a46879bc6d0.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Table.prefab
+  - name: 1e0a1c8e6145ee5306836014a71104b6.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/tile.prefab
+  - name: b6e02b053b0a281efc4510150b65b1fb.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Yama4Players.prefab
+  - name: 7d0c82c4477294195a24e3da4a23784e.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/Meld (left).prefab
+  - name: 7d1c7b77c5dff84bf1a13e00cc8c4ce4.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/Meld (opposite).prefab
+  - name: 5f1cab368a874cdaa31541644d0f44a5.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/Meld (right).prefab
+  - name: d14d1c3f3292c5c362a5e8e8d75388ea.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (left).prefab
+  - name: bb3e9ab49f4ddcd0506f838a1ff555de.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (opposite).prefab
+  - name: 5be4e82bb789d3926bf4693c5950c605.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (right).prefab
+  - name: 4f5387764a69460fa72202903fe1bae9.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/Mahjong/Melds/MeldKong (self).prefab
+  - name: 37b9db98163006f128deb498b3153128.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/HandTilePanel.prefab
+  - name: 9b70f5a1b7639ccbf3ba9165043ef147.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/BaseNumberPrefab.prefab
+  - name: 5c220d8a312d79a5e7b786b83ae07ce8.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/BoardCanvas.prefab
+  - name: 480ee9061eb17f16e15b0c6d2c237543.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/BonusNumberPrefab.prefab
+  - name: 5f2b1c2fa29007b46b6df4f60770bda3.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/FanNumberPrefab.prefab
+  - name: ca702952e5e0d25faee8e81fd3d62039.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/FuNumberPrefab.prefab
+  - name: 7e51309467d43e5b99fa838912b0d359.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/HandTile.prefab
+  - name: 20789eb4712b101664d9e67cf0af0fd0.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/MeldOption.prefab
+  - name: c62575321f07d5e97eb3eb92527d6e8b.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayEffect.prefab
+  - name: 36c1f1c2543a6525f3a4e1ac29151cc0.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayerNames.prefab
+  - name: c1f23b4b1b6469aebe840a7aaef24ff9.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayerPlace.prefab
+  - name: 3990cb6740880d0a2c97ff52119945e5.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/PlayerPointPanel.prefab
+  - name: 38fb4aba6f45ffdb2199ec25b3dff682.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/RoundDrawPanel.prefab
+  - name: 0b6afac0941c45e7ada9b806d92713d0.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/SelectableMeld.prefab
+  - name: 0598a6ca875319ecb16ab33c81474d16.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/SimpleTile.prefab
+  - name: 9f1c3b8e4f1b6ac12e1ac92b0a304d80.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/TimerPanel.prefab
+  - name: fb63c91b7f082874df2117dcef64ee3b.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/MahjongUI/Elements/YakuItem.prefab
+  - name: 8d8dd794c2bedfed59608064278ee78b.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/PUNLobby/InTurnPanel.prefab
+  - name: 0537ca063ba527d83074275c3e6e1281.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/PUNLobby/LocalSettingPanel.prefab
+  - name: 0d50deed26e4caaf80b939f99c6a5866.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/PUNLobby/PlayerInfoPanel.prefab
+  - name: 8358abd12e58fd64ab5d0686e51b0fed.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/PUNLobby/RulePanel.prefab
+  - name: 000e7d01459c0b7fc6c46ef807402a13.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/PUNLobby/WarningPanel.prefab
+  - name: 2fdd1a2efb057936336ac07df3dae28c.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/Button.prefab
+  - name: 613f5e9a9c98c9ca45d231a59dd559a0.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/InputField (TMP).prefab
+  - name: 486c8ccadb4e6110f51dff1cd58cd0b3.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/InputField.prefab
+  - name: 835d99a584f3599335333e822de4c2b7.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/SettingItem-Bool.prefab
+  - name: babf561b0d8c550811aaab63037f9c91.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/SettingItem-Selection.prefab
+  - name: f09105227d239ad00221a5cf9bc74637.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/SettingItem-Text.prefab
+  - name: 6db9166d416dab7a3ca85f9dfee62858.unity3d
+    assets:
+    - Assets/Bundles/UI/Prefabs/UI/Toggle.prefab
+  - name: 2efc619c3f96e68cc7eaeffd09addad3.unity3d
+    assets:
+    - Assets/Bundles/Unit/Unit.prefab
+  - name: 66456f22110f634cc87f261f767884e9.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/myres2.png
+  - name: 4401899673bc0a0e20b60af3f7863c71.unity3d
+    assets:
+    - Assets/Resources/Fonts/SOURCEHANSANSSC-MEDIUM.asset
+  - name: 49379495216ea3af0a2e2d6da2979d04.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/room.png
+  - name: 1aa355706e1767666124331a716c7890.unity3d
+    assets:
+    - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader
+    - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader
+  - name: c71648784d68dde90ad1397371035a64.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/bothui.png
+  - name: 721f123a5fb232f5154134d3690ee4cd.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/majiangkuang.png
+  - name: 36e91a4afba510cfc6db1f8913809c0d.unity3d
+    assets:
+    - Assets/Resources/Textures/TileTextures/0m.png
+  - name: e5b183952cf9affbafb36ddf5cf5085d.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/majiangarrow.png
+  - name: c75a6ce7e19916e3481035e123057ed4.unity3d
+    assets:
+    - Assets/Resources/Fbx/tile.fbx
+  - name: 5d2ba9ea54372424102cc32dadbb2177.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/mjdesktop3.png
+  - name: 598230f68074619052f3cc38082fbd8b.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/stick.png
+  - name: cdf99c6a059f53b4b10136ab88e8cdde.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/extraInfo.png
+  - name: 0f90d47d4ae2c5648d08f9968bae3f49.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/player_indicator.png
+  - name: cd67c4becb7bd4b30399981109cc4dbe.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/feng.png
+  - name: c7567c82e22fc133554507da0a3fba6b.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/bg.png
+  - name: 1fbec7d074ec6016ca3ac48e5c2f3b4b.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/tile_ui.png
+  - name: b4515fbdd6352e10e56de73e7efa3865.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/mjdesktop1.png
+  - name: 24c8ae3776198cef36dd5a348131add5.unity3d
+    assets:
+    - Assets/Resources/Sprites/PlaceNumbers.asset
+  - name: 49ae61b0a858dba18d0b7835f87167a6.unity3d
+    assets:
+    - Assets/Resources/Sprites/PlaceCharacters.asset
+  - name: bfcb1265b077491e8b02e44260d2e652.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/mjdesktop2.png
+  - name: 1f213bff4cfaed772410932d5aaaf055.unity3d
+    assets:
+    - Assets/Resources/Sprites/BaseNumbers.asset
+  - name: 9292420a7e9f1147585f2880087ee88c.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/mjdesktop2_new.png

@@ -1,0 +1,21 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+namespace ET
+{
+	public class *ComponentAwakeSystem : AwakeSystem<*Component>
+	{
+		public override void Awake(*Component self)
+		{
+			self.Awake();
+		}
+	}
+	
+	public static class *ComponentSystem
+	{
+		public static void ExtendMethod(this *Component self)
+		{
+			//dosomething
+		}
+	}
+}

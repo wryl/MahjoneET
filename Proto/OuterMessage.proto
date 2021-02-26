@@ -1,0 +1,541 @@
+syntax = "proto3";
+package ET;
+
+message C2M_TestRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	string request = 1;
+}
+
+message M2C_TestResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string response = 1;
+}
+
+message Actor_TransferRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MapIndex = 1;
+}
+
+message Actor_TransferResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message C2G_EnterMap // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message G2C_EnterMap // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	// 自己的unit id
+	int64 UnitId = 1;
+	// 所有的unit
+	repeated UnitInfo Units = 2;
+}
+
+message UnitInfo
+{
+	int64 UnitId  = 1;
+
+	float X = 2;
+	float Y = 3;
+	float Z = 4;
+}
+
+message M2C_CreateUnits // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    repeated UnitInfo Units = 1;
+}
+
+message Frame_ClickMap // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 Id = 94;
+	
+	float X = 1;
+	float Y = 2;
+	float Z = 3;
+}
+
+message M2C_PathfindingResult // IActorMessage
+{
+	int64 ActorId = 93;
+	
+	int64 Id = 1;
+
+	float X = 2;
+	float Y = 3;
+	float Z = 4;
+	
+	repeated float Xs = 5;
+	repeated float Ys = 6;
+	repeated float Zs = 7;
+}
+
+
+message C2R_Ping // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message R2C_Ping // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message G2C_Test // IMessage
+{
+}
+
+message C2M_Reload // IRequest
+{
+	int32 RpcId = 90;
+	string Account = 1;
+	string Password = 2;
+}
+
+message M2C_Reload // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message C2R_Login // IRequest
+{
+	int32 RpcId = 90;
+	string	Account	 = 1;	// 帐号
+	string	Password = 2;	// 密码
+}
+
+message R2C_Login // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string Address = 1;
+	int64 Key	    = 2;
+	int64 GateId = 3;
+}
+
+message C2G_LoginGate // IRequest
+{
+	int32 RpcId = 90;
+	int64 Key = 1;	// 帐号
+	int64 GateId = 2;
+}
+
+message G2C_LoginGate // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	int64 PlayerId = 1;
+}
+
+message G2C_TestHotfixMessage // IMessage
+{
+	string Info = 1;
+}
+
+message C2M_TestActorRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 91;
+	string Info = 1;
+}
+
+message M2C_TestActorResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string Info = 1;
+}
+
+message PlayerInfo // IMessage
+{
+	int32 RpcId = 90;
+}
+
+message C2G_PlayerInfo // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message G2C_PlayerInfo // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	PlayerInfo PlayerInfo = 1;
+	repeated PlayerInfo PlayerInfos = 2;
+    repeated string TestRepeatedString = 3;
+    repeated int32 TestRepeatedInt32 = 4;
+    repeated int64 TestRepeatedInt64 = 5;
+}
+/*    mahjong                  */
+
+//房间内玩家
+message PlayerInRoom // IDataWithInsId
+{
+	int64 InsId = 95;
+	int64 GateSessionId = 96;
+	int64 UserId = 1;
+	string NickName = 2;
+	string Icon = 3;
+	bool IsOnline = 4;
+	bool IsMaster = 5;
+	bool IsReady = 6;
+}
+//	房间列表
+message C2G_RoomList // IRequest
+{
+	int32 RpcId = 90;
+}
+message G2C_RoomList // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	repeated MJ_RoomInfoInList rooms = 1;
+}
+//	创建房间
+message C2G_CreateRoom // IRequest
+{
+	int32 RpcId = 90;
+	Mahjong.Model.GameSetting Setting = 1;
+	string RoomName = 2;
+}
+//	创建房间返回
+message G2C_CreateRoom // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	PlayerInRoom myplayer = 1;
+	MJ_RoomInfo RoomInfo = 2;
+}
+//	加入房间
+message C2G_JoinRoom // IRequest
+{
+	int32 RpcId = 90;
+	int64 RoomId = 1;
+}
+message G2C_JoinRoom // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	PlayerInRoom myplayer = 1;
+	MJ_RoomInfo RoomInfo = 2;
+}
+
+message MJ_NormalSetting
+{
+	int32 testid = 1;
+}
+//部分房间数据,用于列表显示
+message MJ_RoomInfoInList // IDataWithInsId
+{
+	int64 InsId = 95;
+	int64 RoomId = 1;
+	Mahjong.Model.GameMode GameMode = 2;
+	Mahjong.Model.GamePlayers GamePlayers = 3;
+	Mahjong.Model.RoundCount RoundCount = 4;
+	int32 NowPlayerNum = 5;
+	string RoomName = 6;
+}
+//完整房间数据.用于数据初始化
+message MJ_RoomInfo
+{
+	int64 RoomId = 1;
+	Mahjong.Model.GameSetting Setting = 2; 
+	repeated PlayerInRoom PlayerInRooms = 3;
+	string RoomName = 4;
+}
+message MJ_Setting
+{
+	string RoomName = 80;
+	int64 RoomId = 81;
+	Mahjong.Model.GameSetting Setting = 1; 
+	
+}
+message MJ_RoomPlayerUpdate // IMessage
+{
+	int32 RpcId = 90;
+	repeated PlayerInRoom players = 1;
+}
+message G2C_RoomPlayerChange // IActorMessage
+{
+	int64 ActorId = 93;
+	PlayerInRoom player = 1;
+	Mahjong.Model.PlayerChangeState ChangeState = 2;
+}
+message MJ_RoomPlayerChangeRequest // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	PlayerInRoom player = 1;
+}
+message MJ_QuitRoomRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+message MJ_QuitRoomResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+message MJ_KickPlayer // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 KickId = 1;
+}
+//客户端请求开始游戏
+message MJ_StartGameRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+message MJ_StartGameResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+message M2C_RoomClose // IActorMessage
+{
+	int64 ActorId = 93;
+}
+//通知客户端加载游戏资源
+message M2C_EnterMahjoneGame // IActorMessage
+{
+	int64 ActorId = 93;
+}
+//玩家loading完毕 WaitForLoading=>GamePrepare
+message MJ_LoadComplete // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+//通知玩家准备开始
+message M2C_GamePrepare // IActorMessage
+{
+	int64 ActorId = 93;
+	int32 PlayerIndex = 1;
+	repeated int Points = 2;
+	repeated string PlayerNames = 3;
+	Mahjong.Model.GameSetting Settings = 4;
+}
+message ClientReadyEvent // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+message NextRoundEvent // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+message M2C_RoundStartInfo // IActorMessage
+{
+	int64 ActorId = 93;
+	int32 PlayerIndex = 1;
+	int32 Field = 2;
+	int32 Dice = 3;
+	int32 Extra = 4;
+	int32 RichiSticks = 5;
+	int32 OyaPlayerIndex = 6;
+	repeated int Points = 7;
+	repeated Mahjong.Model.Tile InitialHandTiles = 8;
+	Mahjong.Model.MahjongSetData MahjongSetData = 9;
+}
+message M2C_DrawTileInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 DrawPlayerIndex = 2;
+	Mahjong.Model.Tile Tile = 3;
+	int32 BonusTurnTime = 4;
+	bool Zhenting = 6;
+	repeated GamePlay.Server.Model.InTurnOperation Operations = 7;
+	Mahjong.Model.MahjongSetData MahjongSetData = 9;
+}
+message Event_DiscardTileInfo // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 PlayerIndex = 1;
+	bool IsRichiing = 2;
+	bool DiscardingLastDraw = 3;
+	Mahjong.Model.Tile Tile = 4;
+	int32 BonusTurnTime = 5;
+	bool Zhenting = 6;
+	repeated GamePlay.Server.Model.OutTurnOperation Operations = 7;
+	repeated Mahjong.Model.Tile HandTiles = 8;
+	repeated Mahjong.Model.RiverData Rivers = 9;
+}
+
+message M2C_TurnEndInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	GamePlay.Server.Model.OutTurnOperationType ChosenOperationType = 2;
+	repeated GamePlay.Server.Model.OutTurnOperation Operations = 3;
+	repeated int Points = 4;
+	repeated bool RichiStatus = 5;
+	int32 RichiSticks = 6;
+	Mahjong.Model.MahjongSetData MahjongSetData = 9;
+}
+message M2C_OperationPerformInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 OperationPlayerIndex = 1;
+	Mahjong.Model.PlayerHandData HandData = 2;
+	GamePlay.Server.Model.OutTurnOperation Operation = 3;
+	int BonusTurnTime = 4;
+	repeated Mahjong.Model.RiverData Rivers = 5;
+	Mahjong.Model.MahjongSetData MahjongSetData = 9;
+}
+message M2C_GameEndInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	repeated string PlayerNames = 1;
+	repeated int Points = 2;
+	repeated int Places = 3;
+}
+message Event_OutTurnOperationInfo // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 PlayerIndex = 1;
+	GamePlay.Server.Model.OutTurnOperation Operation = 2;
+	int32 BonusTurnTime = 3;
+}
+message Event_InTurnOperationInfo // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 PlayerIndex = 1;
+	GamePlay.Server.Model.InTurnOperation Operation = 2;
+	int32 BonusTurnTime = 3;
+}
+message M2C_KongInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 KongPlayerIndex = 1;
+	Mahjong.Model.PlayerHandData HandData = 2;
+	repeated GamePlay.Server.Model.OutTurnOperation Operations = 3;
+	int BonusTurnTime = 4;
+	Mahjong.Model.MahjongSetData MahjongSetData = 9;
+}
+message M2C_BeiDoraInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 BeiDoraPlayerIndex = 1;
+	repeated int32 BeiDoras = 2;
+	Mahjong.Model.PlayerHandData HandData = 3;
+	repeated GamePlay.Server.Model.OutTurnOperation Operations = 4;
+	int BonusTurnTime = 5;
+	Mahjong.Model.MahjongSetData MahjongSetData = 9;
+}
+message M2C_RongInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	repeated int32 RongPlayerIndices = 1;
+	repeated string RongPlayerNames = 2;
+	repeated Mahjong.Model.PlayerHandData HandData = 3;
+	Mahjong.Model.Tile WinningTile = 4;
+	repeated Mahjong.Model.Tile DoraIndicators = 5;
+	repeated Mahjong.Model.Tile UraDoraIndicators = 6;
+	repeated bool RongPlayerRichiStatus = 7;
+	repeated GamePlay.Server.Model.NetworkPointInfo RongPointInfos = 8;
+	repeated int TotalPoints = 9;
+}
+message M2C_TsumoInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 TsumoPlayerIndex = 1;
+	string TsumoPlayerName = 2;
+	Mahjong.Model.PlayerHandData TsumoHandData = 3;
+	Mahjong.Model.Tile WinningTile = 4;
+	repeated Mahjong.Model.Tile DoraIndicators = 5;
+	repeated Mahjong.Model.Tile UraDoraIndicators = 6;
+	bool IsRichi = 7;
+	GamePlay.Server.Model.NetworkPointInfo TsumoPointInfo = 8;
+	int TotalPoints = 9;
+}
+message M2C_PointTransferInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	repeated string PlayerNames = 2;
+	repeated GamePlay.Server.Model.PointTransfer PointTransfers = 8;
+	repeated int Points = 9;
+}
+message M2C_RoundDrawInfo // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	GamePlay.Server.Model.RoundDrawType RoundDrawType = 2;
+	repeated Mahjong.Model.WaitingData WaitingData = 8;
+}
+message Event_GamePrepare // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+message Event_OutTurnOperation // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	GamePlay.Server.Model.OutTurnOperation Operation = 1;
+}
+message GameSettingBack
+{
+	Mahjong.Model.GameMode GameMode = 1;
+	Mahjong.Model.GamePlayers GamePlayers = 2;
+	Mahjong.Model.RoundCount RoundCount = 3;
+	Mahjong.Model.MinimumFanConstraintType MinimumFanConstraintType = 4;
+	Mahjong.Model.PointsToGameEnd PointsToGameEnd = 5;
+	bool GameEndsWhenAllLastTop = 6;
+	int32 InitialPoints = 7;
+	int32 FirstPlacePoints = 8;
+	bool AllowHint = 9;
+	Mahjong.Model.InitialDoraCount InitialDoraCount = 10;
+	bool AllowRichiWhenPointsLow = 11;
+	bool AllowRichiWhenNotReady = 12;
+	bool AllowDiscardSameAfterOpen = 13;
+	int32 RichiMortgagePoints = 14;
+	int32 ExtraRoundBonusPerPlayer = 15;
+	int32 NotReadyPunishPerPlayer = 15;
+}

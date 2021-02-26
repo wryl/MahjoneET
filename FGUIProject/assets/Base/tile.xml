@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,129">
+  <controller name="button" exported="true" homePageType="variable" homePage="down" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <loader id="n1_y2yr" name="n1" xy="0,0" size="80,129" url="ui://826tkk4qy2yrbx" clearOnPublish="true">
+      <gearXY controller="button" pages="2,3,4,5" values="0,0|0,-30|0,-30|0,0" tween="true"/>
+      <gearSize controller="button" pages="2,3,4" values="80,129,1,1|80,159,1,1|80,159,1,1" default="80,129,1,1"/>
+    </loader>
+    <image id="n2_y2yr" name="shine" src="y2yrct" fileName="room/shine.png" xy="0,0" size="80,129" visible="false" alpha="0" blend="add">
+      <relation target="n1_y2yr" sidePair="top-top"/>
+    </image>
+  </displayList>
+  <transition name="ShiningEffect">
+    <item time="0" type="Alpha" target="n2_y2yr" tween="true" startValue="0" endValue="0.6" duration="8"/>
+    <item time="0" type="Visible" target="n2_y2yr" value="true"/>
+    <item time="8" type="Alpha" target="n2_y2yr" tween="true" startValue="0.6" endValue="0" duration="7"/>
+    <item time="15" type="Visible" target="n2_y2yr" value="false"/>
+  </transition>
+</component>

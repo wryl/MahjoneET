@@ -1,0 +1,17 @@
+{
+    "name": "Unity.Model",
+    "references": [
+        "Unity.ThirdParty",
+        "Unity.TextMeshPro",
+        "XAsset.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

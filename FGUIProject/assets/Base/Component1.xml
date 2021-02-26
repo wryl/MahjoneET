@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <displayList>
+    <component id="n5_y2yr" name="n5" src="y2yrcu" fileName="EffectPanel.xml" xy="520,187">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <loader id="n4_y2yr" name="zhenting" xy="-31,590" size="133,85" url="ui://826tkk4qy2yr7m" autoSize="true">
+      <relation target="n2_y2yr" sidePair="right-left,top-top"/>
+    </loader>
+    <list id="n0_y2yr" name="HandTiles" xy="109,580" size="960,131" group="n2_y2yr" layout="flow_hz" overflow="scroll" scroll="horizontal">
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+      <item url="ui://826tkk4qy2yrcs"/>
+    </list>
+    <component id="n1_y2yr" name="LastDraw" src="y2yrcs" fileName="tile.xml" xy="1091,580" group="n2_y2yr" controller="button,2"/>
+    <group id="n2_y2yr" name="HandTilePanel" xy="109,580" size="1062,131" advanced="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+  </displayList>
+</component>
