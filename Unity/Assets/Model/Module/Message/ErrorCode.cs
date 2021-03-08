@@ -55,7 +55,7 @@ namespace ET
         public const int ERR_Exception = 200000;
 
         public const int ERR_Cancel = 200001;
-
+        public const int ERR_NOTMASTER = 200002;
         public static bool IsRpcNeedThrowException(int error)
         {
             if (error == 0)

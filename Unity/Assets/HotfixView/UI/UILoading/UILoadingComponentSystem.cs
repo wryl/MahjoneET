@@ -30,6 +30,13 @@ namespace ET
                 {
                     return;
                 }
+
+                BundleDownloaderComponent bundleDownloaderComponent = Game.Scene.GetComponent<BundleDownloaderComponent>();
+                if (bundleDownloaderComponent == null)
+                {
+                    continue;
+                }
+                self.text.text = $"{bundleDownloaderComponent.Progress}%";
             }
         }
     }

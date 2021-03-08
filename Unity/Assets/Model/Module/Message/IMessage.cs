@@ -54,4 +54,8 @@
             set;
         }
     }
+    public interface IDataWithInsId
+    {
+        long InsId { get; set; }
+    }
 }

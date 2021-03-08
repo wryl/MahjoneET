@@ -6,7 +6,7 @@ namespace ET
 /// <summary>
 /// 传送unit
 /// </summary>
-	[ResponseType(typeof(M2M_TrasferUnitResponse))]
+	[ResponseType(typeof(M2M_TrasferUnitResponse))]
 	[Message(InnerOpcode.M2M_TrasferUnitRequest)]
 	[ProtoContract]
 	public partial class M2M_TrasferUnitRequest: IActorRequest
@@ -40,7 +40,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(A2M_Reload))]
+	[ResponseType(typeof(A2M_Reload))]
 	[Message(InnerOpcode.M2A_Reload)]
 	[ProtoContract]
 	public partial class M2A_Reload: IActorRequest
@@ -68,7 +68,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(G2G_LockResponse))]
+	[ResponseType(typeof(G2G_LockResponse))]
 	[Message(InnerOpcode.G2G_LockRequest)]
 	[ProtoContract]
 	public partial class G2G_LockRequest: IActorRequest
@@ -102,7 +102,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(G2G_LockReleaseResponse))]
+	[ResponseType(typeof(G2G_LockReleaseResponse))]
 	[Message(InnerOpcode.G2G_LockReleaseRequest)]
 	[ProtoContract]
 	public partial class G2G_LockReleaseRequest: IActorRequest
@@ -136,7 +136,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(ObjectAddResponse))]
+	[ResponseType(typeof(ObjectAddResponse))]
 	[Message(InnerOpcode.ObjectAddRequest)]
 	[ProtoContract]
 	public partial class ObjectAddRequest: IActorRequest
@@ -170,7 +170,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(ObjectLockResponse))]
+	[ResponseType(typeof(ObjectLockResponse))]
 	[Message(InnerOpcode.ObjectLockRequest)]
 	[ProtoContract]
 	public partial class ObjectLockRequest: IActorRequest
@@ -207,7 +207,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(ObjectUnLockResponse))]
+	[ResponseType(typeof(ObjectUnLockResponse))]
 	[Message(InnerOpcode.ObjectUnLockRequest)]
 	[ProtoContract]
 	public partial class ObjectUnLockRequest: IActorRequest
@@ -244,7 +244,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(ObjectRemoveResponse))]
+	[ResponseType(typeof(ObjectRemoveResponse))]
 	[Message(InnerOpcode.ObjectRemoveRequest)]
 	[ProtoContract]
 	public partial class ObjectRemoveRequest: IActorRequest
@@ -275,7 +275,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(ObjectGetResponse))]
+	[ResponseType(typeof(ObjectGetResponse))]
 	[Message(InnerOpcode.ObjectGetRequest)]
 	[ProtoContract]
 	public partial class ObjectGetRequest: IActorRequest
@@ -309,7 +309,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(G2R_GetLoginKey))]
+	[ResponseType(typeof(G2R_GetLoginKey))]
 	[Message(InnerOpcode.R2G_GetLoginKey)]
 	[ProtoContract]
 	public partial class R2G_GetLoginKey: IActorRequest
@@ -346,7 +346,7 @@ namespace ET
 
 	}
 
-	[ResponseType(typeof(M2G_CreateUnit))]
+	[ResponseType(typeof(M2G_CreateUnit))]
 	[Message(InnerOpcode.G2M_CreateUnit)]
 	[ProtoContract]
 	public partial class G2M_CreateUnit: IActorRequest
@@ -399,6 +399,130 @@ namespace ET
 
 		[ProtoMember(94)]
 		public long ActorId { get; set; }
+
+	}
+
+//mahjong
+	[ResponseType(typeof(M2G_CreateRoom))]
+	[Message(InnerOpcode.G2M_CreateRoom)]
+	[ProtoContract]
+	public partial class G2M_CreateRoom: IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(93)]
+		public long ActorId { get; set; }
+
+		[ProtoMember(1)]
+		public PlayerInRoom Player { get; set; }
+
+		[ProtoMember(2)]
+		public long GateSessionId { get; set; }
+
+		[ProtoMember(3)]
+		public Mahjong.Model.GameSetting Setting { get; set; }
+
+		[ProtoMember(4)]
+		public string RoomName { get; set; }
+
+	}
+
+	[Message(InnerOpcode.M2G_CreateRoom)]
+	[ProtoContract]
+	public partial class M2G_CreateRoom: IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+// 自己的unit id
+// 自己的unit id
+		[ProtoMember(1)]
+		public long UnitId { get; set; }
+
+		[ProtoMember(2)]
+		public MJ_RoomInfo RoomInfo { get; set; }
+
+	}
+
+//	房间列表
+	[ResponseType(typeof(M2G_RoomList))]
+	[Message(InnerOpcode.G2M_RoomList)]
+	[ProtoContract]
+	public partial class G2M_RoomList: IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(93)]
+		public long ActorId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.M2G_RoomList)]
+	[ProtoContract]
+	public partial class M2G_RoomList: IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+		[ProtoMember(1)]
+		public List<MJ_RoomInfoInList> rooms = new List<MJ_RoomInfoInList>();
+
+	}
+
+//	加入房间
+	[ResponseType(typeof(M2G_JoinRoom))]
+	[Message(InnerOpcode.G2M_JoinRoom)]
+	[ProtoContract]
+	public partial class G2M_JoinRoom: IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(93)]
+		public long ActorId { get; set; }
+
+		[ProtoMember(1)]
+		public PlayerInRoom Player { get; set; }
+
+		[ProtoMember(2)]
+		public long GateSessionId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.M2G_JoinRoom)]
+	[ProtoContract]
+	public partial class M2G_JoinRoom: IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+// 自己的unit id
+// 自己的unit id
+		[ProtoMember(1)]
+		public long UnitId { get; set; }
+
+		[ProtoMember(2)]
+		public MJ_RoomInfo RoomInfo { get; set; }
 
 	}
 

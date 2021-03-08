@@ -34,7 +34,7 @@ namespace ET
 				
 				Log.Info($"server start........................ {Game.Scene.Id}");
 
-				Game.EventSystem.Publish(new EventType.AppStart());
+				Game.EventSystem.Publish(new EventType.AppStart()).Coroutine();
 				
 				while (true)
 				{

@@ -36,6 +36,9 @@ namespace ET
                 case SceneType.Location:
                     scene.AddComponent<LocationComponent>();
                     break;
+                case SceneType.MahjongCenter:
+                    scene.AddComponent<MJRoomManagerComponent>();
+                    break;
             }
 
             return scene;

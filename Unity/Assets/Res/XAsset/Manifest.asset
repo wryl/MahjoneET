@@ -1,0 +1,636 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7882bd278763c45f49cef7deeae496e5, type: 3}
+  m_Name: Manifest
+  m_EditorClassIdentifier: 
+  activeVariants: []
+  dirs:
+  - Assets/Bundles/UI
+  - Assets/Bundles/UI/Prefabs/Component
+  - Assets/Bundles/UI/Prefabs/Mahjong/Melds
+  - Assets/Bundles/UI/Prefabs/Mahjong
+  - Assets/Bundles/UI/Prefabs/MahjongUI/Elements
+  - Assets/Bundles/UI/Prefabs/MahjongUI
+  - Assets/Bundles/UI/Prefabs/PUNLobby
+  - Assets/Bundles/UI/Prefabs/UI
+  - Assets/Bundles/Unit
+  - Assets/Scenes
+  assets:
+  - name: CreateRoomPanel.prefab
+    bundle: 11
+    dir: 0
+  - name: AudioManager.prefab
+    bundle: 80
+    dir: 1
+  - name: Meld (left).prefab
+    bundle: 50
+    dir: 2
+  - name: Meld (opposite).prefab
+    bundle: 51
+    dir: 2
+  - name: Meld (right).prefab
+    bundle: 42
+    dir: 2
+  - name: MeldKong (left).prefab
+    bundle: 78
+    dir: 2
+  - name: MeldKong (opposite).prefab
+    bundle: 68
+    dir: 2
+  - name: MeldKong (right).prefab
+    bundle: 39
+    dir: 2
+  - name: MeldKong (self).prefab
+    bundle: 36
+    dir: 2
+  - name: PlayerBeiDoras.prefab
+    bundle: 85
+    dir: 3
+  - name: PlayerHand.prefab
+    bundle: 23
+    dir: 3
+  - name: PlayerRiver.prefab
+    bundle: 63
+    dir: 3
+  - name: PlayerTiles.prefab
+    bundle: 35
+    dir: 3
+  - name: Table.prefab
+    bundle: 38
+    dir: 3
+  - name: Yama4Players.prefab
+    bundle: 66
+    dir: 3
+  - name: playerOpen.prefab
+    bundle: 64
+    dir: 3
+  - name: tile.prefab
+    bundle: 10
+    dir: 3
+  - name: BaseNumberPrefab.prefab
+    bundle: 60
+    dir: 4
+  - name: BoardCanvas.prefab
+    bundle: 40
+    dir: 4
+  - name: BonusNumberPrefab.prefab
+    bundle: 30
+    dir: 4
+  - name: FanNumberPrefab.prefab
+    bundle: 43
+    dir: 4
+  - name: FuNumberPrefab.prefab
+    bundle: 75
+    dir: 4
+  - name: HandTile.prefab
+    bundle: 52
+    dir: 4
+  - name: MeldOption.prefab
+    bundle: 14
+    dir: 4
+  - name: PlayEffect.prefab
+    bundle: 71
+    dir: 4
+  - name: PlayerNames.prefab
+    bundle: 21
+    dir: 4
+  - name: PlayerPlace.prefab
+    bundle: 70
+    dir: 4
+  - name: PlayerPointPanel.prefab
+    bundle: 26
+    dir: 4
+  - name: RoundDrawPanel.prefab
+    bundle: 25
+    dir: 4
+  - name: SelectDrawTile.prefab
+    bundle: 27
+    dir: 4
+  - name: SelectableMeld.prefab
+    bundle: 4
+    dir: 4
+  - name: SimpleTile.prefab
+    bundle: 3
+    dir: 4
+  - name: TimerPanel.prefab
+    bundle: 61
+    dir: 4
+  - name: YakuItem.prefab
+    bundle: 87
+    dir: 4
+  - name: HandTilePanel.prefab
+    bundle: 24
+    dir: 5
+  - name: InTurnPanel.prefab
+    bundle: 57
+    dir: 6
+  - name: LocalSettingPanel.prefab
+    bundle: 2
+    dir: 6
+  - name: PlayerInfoPanel.prefab
+    bundle: 5
+    dir: 6
+  - name: RulePanel.prefab
+    bundle: 54
+    dir: 6
+  - name: WarningPanel.prefab
+    bundle: 0
+    dir: 6
+  - name: Button.prefab
+    bundle: 19
+    dir: 7
+  - name: InputField (TMP).prefab
+    bundle: 44
+    dir: 7
+  - name: InputField.prefab
+    bundle: 31
+    dir: 7
+  - name: SettingItem-Bool.prefab
+    bundle: 55
+    dir: 7
+  - name: SettingItem-Selection.prefab
+    bundle: 67
+    dir: 7
+  - name: SettingItem-Text.prefab
+    bundle: 84
+    dir: 7
+  - name: Toggle.prefab
+    bundle: 48
+    dir: 7
+  - name: RoomCanvas.prefab
+    bundle: 86
+    dir: 0
+  - name: RoomEntry.prefab
+    bundle: 15
+    dir: 0
+  - name: SlotPanel.prefab
+    bundle: 45
+    dir: 0
+  - name: UILobby.prefab
+    bundle: 79
+    dir: 0
+  - name: UILogin.prefab
+    bundle: 7
+    dir: 0
+  - name: Unit.prefab
+    bundle: 18
+    dir: 8
+  - name: Empty.unity
+    bundle: 56
+    dir: 9
+  - name: Init.unity
+    bundle: 59
+    dir: 9
+  - name: PUN_Mahjong.unity
+    bundle: 17
+    dir: 9
+  bundles:
+  - name: 000e7d01459c0b7fc6c46ef807402a13.unity3d
+    id: 0
+    deps: 080000001d000000200000002e000000
+    len: 11374
+    hash: 15df4ddeac708082e14bee868a7412d5
+  - name: 01d830ddafe139800f7ff9e578601ea8.unity3d
+    id: 1
+    deps: 29000000
+    len: 2104
+    hash: 0d37236dd8445a15fa953961beacada7
+  - name: 0537ca063ba527d83074275c3e6e1281.unity3d
+    id: 2
+    deps: 090000004800000051000000
+    len: 6732
+    hash: 27879919e75a81180aacea7aa3860443
+  - name: 0598a6ca875319ecb16ab33c81474d16.unity3d
+    id: 3
+    deps: 0d000000
+    len: 3586
+    hash: 64838ba98582dba778504dec8a6b300e
+  - name: 0b6afac0941c45e7ada9b806d92713d0.unity3d
+    id: 4
+    deps: 
+    len: 8805
+    hash: b2a93aeec9d55b27c452fee6e5358976
+  - name: 0d50deed26e4caaf80b939f99c6a5866.unity3d
+    id: 5
+    deps: 08000000130000001d0000002000000048000000
+    len: 13108
+    hash: f5660827bd1c73ec67e407ced74c99e4
+  - name: 0f90d47d4ae2c5648d08f9968bae3f49.unity3d
+    id: 6
+    deps: 
+    len: 6662
+    hash: a837b5f4ac3ddd02e2dae6ad2ee9da0b
+  - name: 0fdb89a04e55223f72b5ad7a78c32c00.unity3d
+    id: 7
+    deps: 
+    len: 13792
+    hash: e4f3ddb2ddf560fc73368e728360baca
+  - name: 1aa355706e1767666124331a716c7890.unity3d
+    id: 8
+    deps: 
+    len: 18684
+    hash: ad6cd04d4af3adfc02bf2b9969618da5
+  - name: 1ad74c9c846336abc43e4e8115484e79.unity3d
+    id: 9
+    deps: 
+    len: 16475
+    hash: e4495f635249cbfc421d82ced436a95a
+  - name: 1e0a1c8e6145ee5306836014a71104b6.unity3d
+    id: 10
+    deps: 16000000310000004a00000053000000
+    len: 6929
+    hash: 2070fd73ad36a7ce77fae4f1712c6415
+  - name: 1e96772a4c6c74ace02203ff11bc0ee6.unity3d
+    id: 11
+    deps: 08000000130000001d0000001f000000200000002e0000003000000037000000430000004800000054000000
+    len: 69652
+    hash: 51f6373ea0bce319690ce1589d9239ad
+  - name: 1f213bff4cfaed772410932d5aaaf055.unity3d
+    id: 12
+    deps: 29000000
+    len: 2106
+    hash: 447e5339099037ea2217adf16b0727d9
+  - name: 1fbec7d074ec6016ca3ac48e5c2f3b4b.unity3d
+    id: 13
+    deps: 
+    len: 184036
+    hash: daa618d48f23832f3258b5c05cfff754
+  - name: 20789eb4712b101664d9e67cf0af0fd0.unity3d
+    id: 14
+    deps: 0d000000
+    len: 8674
+    hash: 162feea20b2731f7197ca4241fac9a61
+  - name: 245cd5149379dfbe5033924dcc2534c9.unity3d
+    id: 15
+    deps: 08000000130000001d0000002000000048000000
+    len: 9716
+    hash: 9e48c1691ba4409304471b70c59e66a1
+  - name: 24c8ae3776198cef36dd5a348131add5.unity3d
+    id: 16
+    deps: 29000000
+    len: 2024
+    hash: 579dc83a55738359a9c23a4c027fa71f
+  - name: 2b7134416c0508e4574a5763fb8c0810.unity3d
+    id: 17
+    deps: 010000000300000006000000090000000a0000000c0000000d0000000e000000100000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001e00000021000000230000002400000025000000260000002700000028000000290000002a0000002b0000002e0000002f00000031000000320000003300000034000000350000003a0000003c0000003d0000003e0000003f0000004000000041000000420000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000005100000052000000530000005500000057000000
+    len: 811409
+    hash: 81ababd8fa6fa82f93a360e8507c209b
+  - name: 2efc619c3f96e68cc7eaeffd09addad3.unity3d
+    id: 18
+    deps: 
+    len: 795486
+    hash: d3820b871a364e5e1220c3fa70bfe88f
+  - name: 2fdd1a2efb057936336ac07df3dae28c.unity3d
+    id: 19
+    deps: 080000001d00000020000000
+    len: 7790
+    hash: db7ac54affc199e1f9071cceb244e23a
+  - name: 300312b9de644424388e08f0a319d7b9.unity3d
+    id: 20
+    deps: 52000000
+    len: 2118
+    hash: dd8f5c6aff198e8b829dd94e6bbe7b7c
+  - name: 36c1f1c2543a6525f3a4e1ac29151cc0.unity3d
+    id: 21
+    deps: 
+    len: 4997
+    hash: 4fc505fc92a103a5847f4c67f078a208
+  - name: 36e91a4afba510cfc6db1f8913809c0d.unity3d
+    id: 22
+    deps: 
+    len: 8623
+    hash: 225f56aacb93368c2f91b97574919be5
+  - name: 37b3ed24e6bdd1f23649e4e89cd3e060.unity3d
+    id: 23
+    deps: 0a00000016000000310000004a00000053000000
+    len: 15205
+    hash: fe90783166b0cd578795cacf1f6a8820
+  - name: 37b9db98163006f128deb498b3153128.unity3d
+    id: 24
+    deps: 030000000d0000001b000000290000002e00000034000000
+    len: 9603
+    hash: 1eb350b87949627b20b7989d5c05a8b7
+  - name: 38fb4aba6f45ffdb2199ec25b3dff682.unity3d
+    id: 25
+    deps: 0d00000045000000
+    len: 7362
+    hash: 87363bb7005a7379e0fc284941198d5b
+  - name: 3990cb6740880d0a2c97ff52119945e5.unity3d
+    id: 26
+    deps: 0c000000100000001400000021000000290000002f0000003c000000410000004500000052000000
+    len: 8034
+    hash: 84cd38a4f904b23a33f7b5087aaa3cd9
+  - name: 39f47f2bb065ce66a955fa47e6fdaf66.unity3d
+    id: 27
+    deps: 0d000000
+    len: 3784
+    hash: ed5754022876b396199f6cb9cb665508
+  - name: 3d777d929ab639ce27300f3c1a64e265.unity3d
+    id: 28
+    deps: 35000000
+    len: 51382
+    hash: 982e20e44ce2d13e978bdd4658dc39d2
+  - name: 4401899673bc0a0e20b60af3f7863c71.unity3d
+    id: 29
+    deps: 08000000
+    len: 9198975
+    hash: 2c3c6c06215b985ba8e7fba9c9ea3b18
+  - name: 480ee9061eb17f16e15b0c6d2c237543.unity3d
+    id: 30
+    deps: 29000000
+    len: 3604
+    hash: 90ef85c612e305288dd7877ba8c869a0
+  - name: 486c8ccadb4e6110f51dff1cd58cd0b3.unity3d
+    id: 31
+    deps: 20000000
+    len: 6236
+    hash: 352d7026839d64fe8d6e4a33dda325cf
+  - name: 49379495216ea3af0a2e2d6da2979d04.unity3d
+    id: 32
+    deps: 
+    len: 435674
+    hash: 36cd320bb467eff34d75dbab3278b616
+  - name: 49ae61b0a858dba18d0b7835f87167a6.unity3d
+    id: 33
+    deps: 29000000
+    len: 2032
+    hash: 46e6dc88add979004806a3b343b69134
+  - name: 4c452aad35f847aa32bfc3b2acad9935.unity3d
+    id: 34
+    deps: 
+    len: 4073419
+    hash: e2b8363de171965340581c90e9d0f1e6
+  - name: 4c7e91f7aade7286ecd15994b8dddc29.unity3d
+    id: 35
+    deps: 0a000000160000001700000024000000270000002a0000003100000032000000330000003f00000040000000440000004a0000004e0000005300000055000000
+    len: 200007
+    hash: d6285d918f54fdebb27e1bb1ef76a124
+  - name: 4f5387764a69460fa72202903fe1bae9.unity3d
+    id: 36
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9237
+    hash: e6ca5ffc8b5f71bb68df5deb0681af05
+  - name: 598230f68074619052f3cc38082fbd8b.unity3d
+    id: 37
+    deps: 
+    len: 4634
+    hash: e76d0dab7c2d2b0a330b5873c9721602
+  - name: 5a6650b253911f2df9754a46879bc6d0.unity3d
+    id: 38
+    deps: 060000000a0000001500000016000000170000001c00000023000000240000002500000027000000280000002a000000310000003200000033000000350000003f000000400000004200000044000000490000004a0000004c0000004d0000004e0000005300000055000000
+    len: 248430
+    hash: d6a4a7b9916c1d9530158d306e5b42a5
+  - name: 5be4e82bb789d3926bf4693c5950c605.unity3d
+    id: 39
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9239
+    hash: b159f1af02346765b3823c9f3ff7a29c
+  - name: 5c220d8a312d79a5e7b786b83ae07ce8.unity3d
+    id: 40
+    deps: 0600000025000000490000004c0000004d000000
+    len: 10138
+    hash: 45c37f214e1fc6d297852c766667d4ae
+  - name: 5d2ba9ea54372424102cc32dadbb2177.unity3d
+    id: 41
+    deps: 
+    len: 245350
+    hash: 38c790dc94afb7f4136969027fb7a68c
+  - name: 5f1cab368a874cdaa31541644d0f44a5.unity3d
+    id: 42
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9240
+    hash: 524fb2ee539ffd871fae6eb43e126690
+  - name: 5f2b1c2fa29007b46b6df4f60770bda3.unity3d
+    id: 43
+    deps: 29000000
+    len: 3600
+    hash: 2240366ecdfae962f219fdd40eb77561
+  - name: 613f5e9a9c98c9ca45d231a59dd559a0.unity3d
+    id: 44
+    deps: 080000001d00000020000000
+    len: 9858
+    hash: 8a03a86f02da75b0db900d1e939b66df
+  - name: 64aa1886e59a53e04557748983600c67.unity3d
+    id: 45
+    deps: 080000001d000000200000002e00000048000000
+    len: 274941
+    hash: 98a4aa34d2f32537cd8a7f44d646eaf2
+  - name: 66456f22110f634cc87f261f767884e9.unity3d
+    id: 46
+    deps: 
+    len: 253811
+    hash: 05aef1928559bff6ee1a2266dab36bc6
+  - name: 6c5aede2c6addfda36f4a42d35391cf4.unity3d
+    id: 47
+    deps: 52000000
+    len: 2115
+    hash: 173e6b731fb52caa24bb12edec0f9bff
+  - name: 6db9166d416dab7a3ca85f9dfee62858.unity3d
+    id: 48
+    deps: 20000000
+    len: 6000
+    hash: f66f68891911697e5b0f410ad12fa372
+  - name: 721f123a5fb232f5154134d3690ee4cd.unity3d
+    id: 49
+    deps: 
+    len: 33476
+    hash: 08e50aba780b94b3e3c900b07af6fa57
+  - name: 7d0c82c4477294195a24e3da4a23784e.unity3d
+    id: 50
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9191
+    hash: 1102ee49190aabd5e1f9d65c2b5f5a08
+  - name: 7d1c7b77c5dff84bf1a13e00cc8c4ce4.unity3d
+    id: 51
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9250
+    hash: 3ce7a7b8cab7d0696afbde8d5e86b394
+  - name: 7e51309467d43e5b99fa838912b0d359.unity3d
+    id: 52
+    deps: 0d000000
+    len: 3775
+    hash: 2ad961994e69ee594a0d56c0dcd265b1
+  - name: 7f1f390fab42522095fd6055d914b71c.unity3d
+    id: 53
+    deps: 
+    len: 418590
+    hash: 23fdd8bc47fb6af479449630b49e369a
+  - name: 8358abd12e58fd64ab5d0686e51b0fed.unity3d
+    id: 54
+    deps: 08000000130000001d0000001f000000200000002e00000030000000370000004300000054000000
+    len: 69622
+    hash: b093aca18cdf4f09b6355ddda5d9af37
+  - name: 835d99a584f3599335333e822de4c2b7.unity3d
+    id: 55
+    deps: 2000000030000000
+    len: 7443
+    hash: 4257c9b8c647a234c82394dc615a98ea
+  - name: 8d12ab3508222be1392343f5fdbd0960.unity3d
+    id: 56
+    deps: 
+    len: 21132
+    hash: fcaa89fff05e87eb15989c4b51b470cf
+  - name: 8d8dd794c2bedfed59608064278ee78b.unity3d
+    id: 57
+    deps: 290000003a000000
+    len: 7287
+    hash: 04c6a7fc073e64e3f287e449c4b63bff
+  - name: 9292420a7e9f1147585f2880087ee88c.unity3d
+    id: 58
+    deps: 
+    len: 655110
+    hash: 66ba965349fbfb65345ca53d781769c9
+  - name: 95460f5557eb560c3f6979486032fa76.unity3d
+    id: 59
+    deps: 2200000050000000
+    len: 150099
+    hash: c69f7a60d04916fa1295e8928fb12070
+  - name: 9b70f5a1b7639ccbf3ba9165043ef147.unity3d
+    id: 60
+    deps: 29000000
+    len: 3598
+    hash: 0c85c73a06a759b17ea9412b815980f4
+  - name: 9f1c3b8e4f1b6ac12e1ac92b0a304d80.unity3d
+    id: 61
+    deps: 0c0000001e000000290000003c0000003e000000
+    len: 5648
+    hash: 97f82699ee3658252bf2286c2dcf2d30
+  - name: a48247310477d46663367c2d90831143.unity3d
+    id: 62
+    deps: 29000000
+    len: 2107
+    hash: 427623c41d9eb4853ab28961aced7955
+  - name: a6d257941b733f171d92984657020098.unity3d
+    id: 63
+    deps: 0a00000016000000310000004a00000053000000
+    len: 27001
+    hash: 64bd403d50d0fea567c1e84bb50c9099
+  - name: a9fdcb458a1edd0768876a02e442047f.unity3d
+    id: 64
+    deps: 0a0000001600000024000000270000002a000000310000003200000033000000440000004a0000004e00000053000000
+    len: 3192
+    hash: a4dacdba7eb98d5900f8ccae03a7b771
+  - name: b4515fbdd6352e10e56de73e7efa3865.unity3d
+    id: 65
+    deps: 
+    len: 797133
+    hash: 8b806ee8c25aad1ce922faf0b9cce3c1
+  - name: b6e02b053b0a281efc4510150b65b1fb.unity3d
+    id: 66
+    deps: 160000004a000000
+    len: 25419
+    hash: 17e7c2ce5b615960e7cebfb8004ee071
+  - name: babf561b0d8c550811aaab63037f9c91.unity3d
+    id: 67
+    deps: 2000000030000000
+    len: 7865
+    hash: 2788ae8ae95fa920e4ab4072428b02e3
+  - name: bb3e9ab49f4ddcd0506f838a1ff555de.unity3d
+    id: 68
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9225
+    hash: 5b530e02e4afd0deb7d390a7cc1fff34
+  - name: bfcb1265b077491e8b02e44260d2e652.unity3d
+    id: 69
+    deps: 
+    len: 640599
+    hash: 92828e53677f9131e05e579e1431dfab
+  - name: c1f23b4b1b6469aebe840a7aaef24ff9.unity3d
+    id: 70
+    deps: 1000000021000000290000003c00000045000000
+    len: 6198
+    hash: 82a86f25c91c8229a073d80061de58ba
+  - name: c62575321f07d5e97eb3eb92527d6e8b.unity3d
+    id: 71
+    deps: 3a00000041000000
+    len: 4854
+    hash: f10120736eacefec194cca6f36c19193
+  - name: c71648784d68dde90ad1397371035a64.unity3d
+    id: 72
+    deps: 
+    len: 429580
+    hash: 230d56cd07c9a1f234a4dea6754745dd
+  - name: c7567c82e22fc133554507da0a3fba6b.unity3d
+    id: 73
+    deps: 
+    len: 23739
+    hash: 7788237503f7227c1911be4c6ae2176f
+  - name: c75a6ce7e19916e3481035e123057ed4.unity3d
+    id: 74
+    deps: 16000000
+    len: 56208
+    hash: 8bfc85ac7b2adaa2e613b586bd0be946
+  - name: ca702952e5e0d25faee8e81fd3d62039.unity3d
+    id: 75
+    deps: 29000000
+    len: 3605
+    hash: 209fc12add70e2922d1f7d456b270972
+  - name: cd67c4becb7bd4b30399981109cc4dbe.unity3d
+    id: 76
+    deps: 
+    len: 9859
+    hash: 7e617c37e8604cc8c083ebb45cc8d735
+  - name: cdf99c6a059f53b4b10136ab88e8cdde.unity3d
+    id: 77
+    deps: 
+    len: 13395
+    hash: 18fafe76499437383d860cee43575ffe
+  - name: d14d1c3f3292c5c362a5e8e8d75388ea.unity3d
+    id: 78
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9277
+    hash: d9b6b958e6ab03eb0819f2d4134f89db
+  - name: d271e46befcf51c65a9835c5da2b2741.unity3d
+    id: 79
+    deps: 0500000008000000130000001d0000002000000048000000
+    len: 19153
+    hash: 58221f44fad22fd9fc307b3605651ae7
+  - name: d455a4c7c6c169bc743ece2f6da4a2f8.unity3d
+    id: 80
+    deps: 22000000
+    len: 3771
+    hash: eb684aecc570308d7f291e2e98b42f83
+  - name: ddd95d05291ff866c2b356189641836f.unity3d
+    id: 81
+    deps: 
+    len: 16661
+    hash: 18be0f82911a0de041722b8a03854411
+  - name: dfa825cbe9e8cb9bcde84f7c0aeaa502.unity3d
+    id: 82
+    deps: 
+    len: 19361
+    hash: f8e4b660ead0b1d1027d9e0ece4a424b
+  - name: e5b183952cf9affbafb36ddf5cf5085d.unity3d
+    id: 83
+    deps: 
+    len: 5809
+    hash: 556463674e1209abc4406a0029f78f16
+  - name: f09105227d239ad00221a5cf9bc74637.unity3d
+    id: 84
+    deps: 1f00000020000000
+    len: 7127
+    hash: 9ad0dfaf0a5a5da7d41a9dc8177fda0f
+  - name: f885968103c84f0aa29471230a2dd183.unity3d
+    id: 85
+    deps: 0a00000016000000310000004a00000053000000
+    len: 9042
+    hash: e379984fd0b5635a02ecd8664a57e0cf
+  - name: fb28c8faf6d7a9b18488e1505342d368.unity3d
+    id: 86
+    deps: 0000000008000000130000001d000000200000002e000000
+    len: 15723
+    hash: 852d6e572e59c20868b84ce7975290cd
+  - name: fb63c91b7f082874df2117dcef64ee3b.unity3d
+    id: 87
+    deps: 01000000290000002b00000045000000
+    len: 5742
+    hash: 5a1b57b91e946f2ad469538f1db8b0a1

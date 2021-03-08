@@ -51,5 +51,48 @@
         {
             public Unit Unit;
         }
+        public struct CreateRoomPanel
+        {
+            public Scene Scene;
+        }
+        public struct LeaveCreateRoomPanel
+        {
+            public Scene Scene;
+        }
+        public struct CreateRoomCanvas
+        {
+            public Scene Scene;
+            public MJ_RoomInfo MJ_RoomInfo;
+            public PlayerInRoom myplayer;
+        }
+        public struct JoinRoomCanvas
+        {
+            public Scene Scene;
+            public MJ_RoomInfo MJ_RoomInfo;
+            public PlayerInRoom myplayer;
+        }
+        public struct RemoveRoomCanvas
+        {
+            public Scene Scene;
+        }
+        public struct RoomPlayerUpdate
+        {
+            public MJ_RoomPlayerUpdate PlayerChange;
+        }
+        public struct RoomPlayerChange
+        {
+            public Scene Scene;
+            public PlayerInRoom PlayerInfo;
+            public bool IsMaster;
+            public Mahjong.Model.PlayerChangeState ChangeState;
+        }
+        public struct StartGame
+        {
+            public Scene Scene;
+        }
+        public struct GameEnd
+        {
+            public Scene Scene;
+        }
     }
 }

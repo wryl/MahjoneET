@@ -33,7 +33,9 @@
     <Compile Include="..\..\Unity\Assets\Model\Module\Config\**\*.cs">
       <Link>Module\Config\%(RecursiveDir)%(FileName)%(Extension)</Link>
     </Compile>
-    
+	  <Compile Include="..\..\Unity\Assets\Model\Mahjone\**\*.cs">
+		  <Link>Mahjone\Client\%(RecursiveDir)%(FileName)%(Extension)</Link>
+	  </Compile>
     <Compile Remove="Libs\**" />
     
     <Compile Include="..\..\Unity\Assets\Model\Module\ActorLocation\ActorResponse.cs">

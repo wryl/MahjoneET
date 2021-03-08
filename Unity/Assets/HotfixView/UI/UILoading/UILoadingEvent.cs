@@ -10,7 +10,6 @@ namespace ET
         {
 	        try
 	        {
-		        await ETTask.CompletedTask;
 				GameObject bundleGameObject = ((GameObject)Resources.Load("KV")).Get<GameObject>(UIType.UILoading);
 				GameObject go = UnityEngine.Object.Instantiate(bundleGameObject);
 				go.layer = LayerMask.NameToLayer(LayerNames.UI);

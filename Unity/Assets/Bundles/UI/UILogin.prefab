@@ -178,7 +178,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 823
 --- !u!114 &114850350457908736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224944102343361862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8BF7\u8F93\u5165\u5E10\u53F7"
+  m_Text: "\u8BF7\u8F93\u5165\u6635\u79F0"
 --- !u!1 &1920061237828514
 GameObject:
   m_ObjectHideFlags: 0

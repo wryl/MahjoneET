@@ -1,7 +1,4 @@
-﻿using System;
-using System.Net;
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace ET
@@ -21,6 +18,7 @@ namespace ET
 	{
 		public static void OnLogin(this UILoginComponent self)
 		{
+			Log.Debug("login");
 			LoginHelper.Login(self.DomainScene(), "127.0.0.1:10002", self.account.GetComponent<InputField>().text).Coroutine();
 		}
 	}

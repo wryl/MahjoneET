@@ -25,5 +25,11 @@ namespace ET
 		 public const ushort G2M_CreateUnit = 10021;
 		 public const ushort M2G_CreateUnit = 10022;
 		 public const ushort G2M_SessionDisconnect = 10023;
+		 public const ushort G2M_CreateRoom = 10024;
+		 public const ushort M2G_CreateRoom = 10025;
+		 public const ushort G2M_RoomList = 10026;
+		 public const ushort M2G_RoomList = 10027;
+		 public const ushort G2M_JoinRoom = 10028;
+		 public const ushort M2G_JoinRoom = 10029;
 	}
 }

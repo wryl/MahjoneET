@@ -189,3 +189,57 @@ message G2M_SessionDisconnect // IActorLocationMessage
     int32 RpcId = 90;
     int64 ActorId = 94;
 }
+//mahjong
+//ResponseType M2G_CreateRoom
+message G2M_CreateRoom // IActorRequest
+{
+    int32 RpcId = 90;
+    int64 ActorId = 93;
+    PlayerInRoom Player = 1;
+    int64 GateSessionId = 2;
+    Mahjong.Model.GameSetting Setting = 3;
+    string RoomName = 4;
+}
+
+message M2G_CreateRoom // IActorResponse
+{
+    int32 RpcId = 90;
+    int32 Error = 91;
+    string Message = 92;
+    // 自己的unit id
+    int64 UnitId = 1;
+    MJ_RoomInfo RoomInfo = 2;
+}
+
+//	房间列表
+//ResponseType M2G_RoomList
+message G2M_RoomList // IActorRequest
+{
+    int32 RpcId = 90;
+    int64 ActorId = 93;
+}
+message M2G_RoomList // IActorResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	repeated MJ_RoomInfoInList rooms = 1;
+}
+//	加入房间
+//ResponseType M2G_JoinRoom
+message G2M_JoinRoom // IActorRequest
+{
+    int32 RpcId = 90;
+    int64 ActorId = 93;
+    PlayerInRoom Player = 1;
+    int64 GateSessionId = 2;
+}
+message M2G_JoinRoom // IActorResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+    string Message = 92;
+    // 自己的unit id
+    int64 UnitId = 1;
+	MJ_RoomInfo RoomInfo = 2;
+}

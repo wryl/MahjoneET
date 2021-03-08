@@ -30,7 +30,7 @@ namespace ET
     {
         // KService创建的时间
         public long StartTime;
-
+        public static KcpOutput KcpOutputv;
         // 当前时间 - KService创建的时间, 线程安全
         public uint TimeNow
         {
@@ -47,7 +47,8 @@ namespace ET
         static KService()
         {
             //Kcp.KcpSetLog(KcpLog);
-            Kcp.KcpSetoutput(KcpOutput);
+            KcpOutputv = KcpOutput;
+            Kcp.KcpSetoutput(KcpOutputv);
         }
 		
         private static readonly byte[] logBuffer = new byte[1024];

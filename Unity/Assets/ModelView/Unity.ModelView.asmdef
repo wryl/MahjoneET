@@ -1,8 +1,11 @@
 {
     "name": "Unity.ModelView",
+    "rootNamespace": "",
     "references": [
         "GUID:997f003cfffd9ec4fae70c0ac9b0ec2b",
-        "GUID:bebd02018e98e44409a761968a7cbcd9"
+        "GUID:bebd02018e98e44409a761968a7cbcd9",
+        "GUID:19e62a5630b193445b3a81927376d6dc",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Init.unity
     guid: e0d691ac8c1d0454ba07089ea820e18a
   - enabled: 1
-    path: Assets/Scenes/Map.unity
-    guid: a5294483f20f40d449699101bb428cda
+    path: Assets/Scenes/Empty.unity
+    guid: b0ae0ffb97e09a644a9274ca6513cf33
+  - enabled: 1
+    path: Assets/Scenes/Empty.unity
+    guid: b0ae0ffb97e09a644a9274ca6513cf33
+  - enabled: 1
+    path: Assets/Scenes/Init.unity
+    guid: e0d691ac8c1d0454ba07089ea820e18a
+  - enabled: 1
+    path: Assets/Scenes/PUN_Mahjong.unity
+    guid: 18076d08b511eae41953087f5d795977
   m_configObjects: {}
