@@ -24,19 +24,20 @@ namespace ET
 			get;
 			set;
 		}
-
+		public bool IsBattleMod = false;
 		public MahjongSet mahjongSet;
 		public ServerRoundStatus CurrentRoundStatus = null;
 
 		public void Awake(GameSetting setting)
 		{
+			IsBattleMod = true;
 			GameSettings = setting;
 			InitAddState();
 			ET.Log.Debug("[Server] ServerBehaviour.OnEnable() is called");
 			StateMachine = new StateMachine();
 			ReadSetting();
 			CurrentRoundStatus = new ServerRoundStatus(GameSettings, GetParent<MJRoomComponent>().AllPlayer);
-			//mahjongSet = new MahjongSet(GameSettings, GameSettings.GetAllTiles());
+			mahjongSet = new MahjongSet(GameSettings, GameSettings.GetAllTiles());
 			WaitForOthersLoading();
 			Game.EventSystem.Publish(new EventType.MessageBroadCast() {actorIds= GetParent<MJRoomComponent>().AllPlayerActorids, actorMessage = new M2C_EnterMahjoneGame() }).Coroutine();
 		}

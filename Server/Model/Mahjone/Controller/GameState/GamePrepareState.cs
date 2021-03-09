@@ -62,7 +62,14 @@ namespace ET
         public void TimeOutRoundStart()
         {
             Log.Debug("[Server] Prepare state time out");
-            GetParent<MahjoneBehaviourComponent>().SelectTiles();
+            if (GetParent<MahjoneBehaviourComponent>().IsBattleMod)
+            {
+                GetParent<MahjoneBehaviourComponent>().SelectTiles();
+            }
+            else
+            {
+                GetParent<MahjoneBehaviourComponent>().RoundStart(true, false, false);
+            }
         }
 
         public void OnEvent(long playerid)
@@ -71,9 +78,8 @@ namespace ET
             if (responds.Count == totalPlayers)
             {
                 Log.Debug("[Server] Prepare state MaxPlayer");
-                GetParent<MahjoneBehaviourComponent>().SelectTiles();
+                TimeOutRoundStart();
             }
         }
-
     }
 }

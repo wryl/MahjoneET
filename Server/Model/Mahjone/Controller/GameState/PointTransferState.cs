@@ -60,9 +60,12 @@ namespace ET
         {
             if (CheckIfGameEnds())
                 ParentBehaviour.GameEnd();
-            else
-                //ParentBehaviour.RoundStart(NextRound, ExtraRound, KeepSticks);
+            else if(ParentBehaviour.IsBattleMod)
+            { 
                 ParentBehaviour.InitHandAfterRong(CurrentRoundStatus.CurrentPlayerIndex);
+            }
+            else
+                ParentBehaviour.RoundStart(NextRound, ExtraRound, KeepSticks);
         }
 
         /// <summary>

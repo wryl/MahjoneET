@@ -46,17 +46,19 @@ namespace ET
 				TotalPoints = TsumoPointInfo.BasePoint * multiplier
 			};
 			Game.EventSystem.Publish(new EventType.MessageBroadCast() { actorIds = players, actorMessage = info }).Coroutine();
-			// 改动.直接全额计算
+			// todo -- tsumo loss related, now there is tsumo loss by default
 			transfers = new List<PointTransfer>();
 			for (int playerIndex = 0; playerIndex < players.Count; playerIndex++)
 			{
 				if (playerIndex == TsumoPlayerIndex) continue;
+				int amount = TsumoPointInfo.BasePoint;
+				if (CurrentRoundStatus.IsDealer(playerIndex)) amount *= 2;
 				int extraPoints = CurrentRoundStatus.ExtraPoints;
 				transfers.Add(new PointTransfer
 				{
 					From = playerIndex,
 					To = TsumoPlayerIndex,
-					Amount = info.TotalPoints + extraPoints
+					Amount = amount + extraPoints
 				});
 			}
 

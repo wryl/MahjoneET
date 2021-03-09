@@ -28,10 +28,10 @@ namespace ET
                 var info = GetInfo(i);
                 Game.EventSystem.Publish(new EventType.ActorMessage() { actorId = players[i], actorMessage = info }).Coroutine();
             }
-            
+
             responds = new bool[players.Count];
             outTurnOperations = new OutTurnOperation[players.Count];
-            timerId = TimerComponent.Instance.NewOnceTimer(TimeHelper.ServerNow() + CurrentRoundStatus.MaxBonusTurnTime*1000 + gameSettings.BaseTurnTime*1000 +
+            timerId = TimerComponent.Instance.NewOnceTimer(CurrentRoundStatus.MaxBonusTurnTime * 1000 + gameSettings.BaseTurnTime * 1000 +
                             ServerConstants.ServerTimeBuffer, TimeOutFunc);
         }
 

@@ -89,7 +89,14 @@ namespace ET
 
 		private void ServerNextState()
 		{
-			GetParent<MahjoneBehaviourComponent>().PreDrawTile(CurrentRoundStatus.OyaPlayerIndex);
+            if (GetParent<MahjoneBehaviourComponent>().IsBattleMod)
+            {
+				GetParent<MahjoneBehaviourComponent>().PreDrawTile(CurrentRoundStatus.OyaPlayerIndex);
+			}
+            else
+            {
+				GetParent<MahjoneBehaviourComponent>().DrawTile(CurrentRoundStatus.OyaPlayerIndex);
+			}
 		}
 
 		public override void OnServerStateExit()

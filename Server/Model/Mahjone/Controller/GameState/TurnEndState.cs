@@ -222,7 +222,15 @@ namespace ET
                     HandleRong();
                     break;
                 case OutTurnOperationType.RoundDraw:
-                    ParentBehaviour.BattleRoundDraw((CurrentPlayerIndex + 1) % players.Count);
+                    if (ParentBehaviour.IsBattleMod)
+                    {
+                        ParentBehaviour.BattleRoundDraw((CurrentPlayerIndex + 1) % players.Count);
+                    }
+                    else
+                    {
+                        var operation = System.Array.Find(Operations, op => op.Type == OutTurnOperationType.RoundDraw);
+                        ParentBehaviour.RoundDraw(operation.RoundDrawType);
+                    }
                     break;
                 case OutTurnOperationType.Kong:
                 case OutTurnOperationType.Pong:
@@ -234,7 +242,14 @@ namespace ET
                     int nextPlayer = CurrentPlayerIndex + 1;
                     if (nextPlayer >= players.Count) nextPlayer -= players.Count;
                     Log.Debug($"[Server] Next turn player index: {nextPlayer}");
-                    ParentBehaviour.PreDrawTile(nextPlayer);
+                    if (ParentBehaviour.IsBattleMod)
+                    {
+                        ParentBehaviour.PreDrawTile(nextPlayer);
+                    }
+                    else
+                    {
+                        ParentBehaviour.DrawTile(nextPlayer);
+                    }
                     break;
                 default:
                     Log.Error($"Unknown type of out turn operation: {operationChosen}");
