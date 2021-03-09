@@ -16,12 +16,12 @@ namespace ET
 				
 				DontDestroyOnLoad(gameObject);
 
-				string[] assemblyNames = { "Unity.Model.dll", "Unity.Hotfix.dll", "Unity.ModelView.dll", "Unity.HotfixView.dll" };
-				
+				string[] assemblyNames = { "Unity.Model", "Unity.Hotfix", "Unity.ModelView", "Unity.HotfixView" };
+
 				foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
 				{
-					string assemblyName = assembly.ManifestModule.Name;
-					if (!assemblyNames.Contains(assemblyName))
+					string assemblyName = assembly.FullName;
+					if (!assemblyNames.Contains(assemblyName.Split(',')[0]))
 					{
 						continue;
 					}

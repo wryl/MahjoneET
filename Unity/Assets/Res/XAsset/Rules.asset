@@ -20,7 +20,7 @@ MonoBehaviour:
   searchPatternPrefab: '*.prefab'
   searchPatternScene: '*.unity'
   searchPatternText: '*.txt,*.bytes,*.json,*.csv,*.xml,*htm,*.html,*.yaml,*.fnt'
-  version: 14
+  version: 15
   scenesInBuild:
   - {fileID: 102900000, guid: e0d691ac8c1d0454ba07089ea820e18a, type: 3}
   - {fileID: 102900000, guid: b0ae0ffb97e09a644a9274ca6513cf33, type: 3}
@@ -321,52 +321,51 @@ MonoBehaviour:
   - name: c71648784d68dde90ad1397371035a64.unity3d
     assets:
     - Assets/Resources/Textures/UIElements/bothui.png
-  - name: 4401899673bc0a0e20b60af3f7863c71.unity3d
+  - name: 1aa355706e1767666124331a716c7890.unity3d
     assets:
-    - Assets/Resources/Fonts/SOURCEHANSANSSC-MEDIUM.asset
+    - Assets/ThirdParty/TextMesh Pro/Resources/Shaders/TMP_SDF.shader
   - name: 49379495216ea3af0a2e2d6da2979d04.unity3d
     assets:
     - Assets/Resources/Textures/UIElements/room.png
-  - name: 1aa355706e1767666124331a716c7890.unity3d
+  - name: 4401899673bc0a0e20b60af3f7863c71.unity3d
     assets:
-    - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader
-    - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader
+    - Assets/Resources/Fonts/SOURCEHANSANSSC-MEDIUM.asset
   - name: 4c452aad35f847aa32bfc3b2acad9935.unity3d
     assets:
     - Assets/Resources/AudioClips/BGM/BGM_001.mp3
-  - name: 721f123a5fb232f5154134d3690ee4cd.unity3d
-    assets:
-    - Assets/Resources/Textures/Environment/majiangkuang.png
-  - name: 36e91a4afba510cfc6db1f8913809c0d.unity3d
-    assets:
-    - Assets/Resources/Textures/TileTextures/0m.png
   - name: e5b183952cf9affbafb36ddf5cf5085d.unity3d
     assets:
     - Assets/Resources/Textures/Environment/majiangarrow.png
+  - name: 36e91a4afba510cfc6db1f8913809c0d.unity3d
+    assets:
+    - Assets/Resources/Textures/TileTextures/0m.png
+  - name: 721f123a5fb232f5154134d3690ee4cd.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/majiangkuang.png
   - name: c75a6ce7e19916e3481035e123057ed4.unity3d
     assets:
     - Assets/Resources/Fbx/tile.fbx
   - name: 7f1f390fab42522095fd6055d914b71c.unity3d
     assets:
     - Assets/Resources/Textures/Environment/Table_Dif.png
-  - name: 598230f68074619052f3cc38082fbd8b.unity3d
-    assets:
-    - Assets/Resources/Textures/Environment/stick.png
-  - name: cdf99c6a059f53b4b10136ab88e8cdde.unity3d
-    assets:
-    - Assets/Resources/Textures/UIElements/extraInfo.png
-  - name: 0f90d47d4ae2c5648d08f9968bae3f49.unity3d
-    assets:
-    - Assets/Resources/Textures/Environment/player_indicator.png
   - name: cd67c4becb7bd4b30399981109cc4dbe.unity3d
     assets:
     - Assets/Resources/Textures/Environment/feng.png
-  - name: c7567c82e22fc133554507da0a3fba6b.unity3d
+  - name: 0f90d47d4ae2c5648d08f9968bae3f49.unity3d
     assets:
-    - Assets/Resources/Textures/Environment/bg.png
+    - Assets/Resources/Textures/Environment/player_indicator.png
+  - name: 598230f68074619052f3cc38082fbd8b.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/stick.png
   - name: 3d777d929ab639ce27300f3c1a64e265.unity3d
     assets:
     - Assets/Resources/Materials/Table.mat
+  - name: c7567c82e22fc133554507da0a3fba6b.unity3d
+    assets:
+    - Assets/Resources/Textures/Environment/bg.png
+  - name: cdf99c6a059f53b4b10136ab88e8cdde.unity3d
+    assets:
+    - Assets/Resources/Textures/UIElements/extraInfo.png
   - name: 1fbec7d074ec6016ca3ac48e5c2f3b4b.unity3d
     assets:
     - Assets/Resources/Textures/UIElements/tile_ui.png
@@ -379,27 +378,27 @@ MonoBehaviour:
   - name: 9292420a7e9f1147585f2880087ee88c.unity3d
     assets:
     - Assets/Resources/Textures/UIElements/mjdesktop2_new.png
-  - name: 24c8ae3776198cef36dd5a348131add5.unity3d
-    assets:
-    - Assets/Resources/Sprites/PlaceNumbers.asset
   - name: 49ae61b0a858dba18d0b7835f87167a6.unity3d
     assets:
     - Assets/Resources/Sprites/PlaceCharacters.asset
   - name: bfcb1265b077491e8b02e44260d2e652.unity3d
     assets:
     - Assets/Resources/Textures/UIElements/mjdesktop2.png
-  - name: 300312b9de644424388e08f0a319d7b9.unity3d
+  - name: 24c8ae3776198cef36dd5a348131add5.unity3d
     assets:
-    - Assets/Resources/Sprites/ScoreBlueNumbers.asset
-  - name: 6c5aede2c6addfda36f4a42d35391cf4.unity3d
-    assets:
-    - Assets/Resources/Sprites/ScoreRedNumbers.asset
+    - Assets/Resources/Sprites/PlaceNumbers.asset
   - name: 1f213bff4cfaed772410932d5aaaf055.unity3d
     assets:
     - Assets/Resources/Sprites/BaseNumbers.asset
+  - name: 300312b9de644424388e08f0a319d7b9.unity3d
+    assets:
+    - Assets/Resources/Sprites/ScoreBlueNumbers.asset
   - name: dfa825cbe9e8cb9bcde84f7c0aeaa502.unity3d
     assets:
     - Assets/Resources/Textures/Environment/score.png
+  - name: 6c5aede2c6addfda36f4a42d35391cf4.unity3d
+    assets:
+    - Assets/Resources/Sprites/ScoreRedNumbers.asset
   - name: a48247310477d46663367c2d90831143.unity3d
     assets:
     - Assets/Resources/Sprites/BonusNumbers.asset
